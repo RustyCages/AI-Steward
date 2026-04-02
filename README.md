@@ -1,30 +1,53 @@
-# AI-Steward
-AI-Steward: Survival Kit for Claude Code Users
-Have you also been hit by the "Rate Limit Wall"? 
-AI-Steward is a lightweight control panel that helps you 
-seamlessly switch between AI agents (Claude, Gemini, Aider) 
-when you run out of credits or the wait time gets too long.
+🚀 AI-Steward: The Claude-Code Safety Net
+AI-Steward is a lightweight, cross-platform control panel designed to solve the "AI Cooldown" problem. When Claude Code hits its credit limit or rate limits, AI-Steward helps you seamlessly transition your work to Gemini or Aider without losing context.
 
 ✨ Features
-Agent Switcher: Jump between Claude and Gemini while maintaining 
-context via CLAUDE.md.
+🔄 Agent Switcher: Instantly jump from Claude to Gemini (via Aider) while carrying over your project's current state.
 
-Smart Handover: Automatically copies a summary prompt to 
-the clipboard for quick handover.
+🧠 Smart Context: Automatically retrieves context from Mnemo Cortex or falls back to your CLAUDE.md file.
 
-AI-Sentry: A built-in timer that monitors your Rate Limits 
-and beeps when you can start coding again.
+⏳ AI-Sentry: A built-in cooldown timer that monitors your rate limits and notifies you exactly when your preferred agent is ready to work again.
 
-Dark Mode UI: A stylish Tkinter panel that always 
-stays on top of the screen.
+📸 Snapshot Prompt: One-click copy for handover instructions to ensure your next AI session starts exactly where the last one ended.
 
+🖥️ Stay-on-Top UI: A clean, dark-mode dashboard that stays visible while you code.
 
-🛠 Installation
+🛠️ Installation
+1. Prerequisites
+Python 3.12+ (Stable version recommended)
 
-Requirements: Python 3.12+ and VS Code.
+Node.js (For Claude Code)
 
-Clone: ​​git clone https://github.com/RustyCages/AI-Steward.git
+Aider (pip install aider-chat)
 
-API Key: Add your GEMINI_API_KEY to your environment variables.
+2. Setup
+Clone the repository to your local machine:
 
-Run: Use the provided .bat file to launch the panel with one click.
+PowerShell
+git clone https://github.com/YOUR_USERNAME/AI-Steward.git
+cd AI-Steward
+3. Configure Environment
+Set your Google API Key for Gemini access:
+
+PowerShell
+[System.Environment]::SetEnvironmentVariable('GEMINI_API_KEY', 'your_key_here', 'User')
+(Restart your terminal/IDE after setting the variable)
+
+🚀 How to Use
+Start the Steward: Run python switchboard.py (or use the provided .bat shortcut).
+
+During AI Cooldown: If Claude hits a limit, click "COPY HANDOVER PROMPT" and paste it into Claude to save your progress.
+
+The Handover: Click "GEMINI (WITH CONTEXT)". A new terminal will open with Aider/Gemini pre-loaded with your latest project details.
+
+The Sentry: Set your reset time (e.g., 2:50) and click "ACTIVATE SENTRY". You can now focus on other tasks until the notification pings you at 19:00.
+
+🧩 Planned Integrations
+[ ] Full Mnemo Cortex semantic memory support.
+
+[ ] Automated git-commit snapshots during handover.
+
+[ ] Multiple model profiles (Flash vs. Pro).
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
