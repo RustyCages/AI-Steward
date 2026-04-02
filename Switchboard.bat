@@ -1,4 +1,4 @@
 @echo off
-cd /d C:\Temp\AI-Steward
+cd /d .\AI-Steward
 py -3.12 switchboard.py
 exit
